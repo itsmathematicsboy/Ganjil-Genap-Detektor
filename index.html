@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ganjil Genap</title>
+</head>
+<body>
+    <main>
+        <h3>Ganjil Genap Detector</h3>
+        <div>
+            Masukan Angka : <input type="text" id = 'input-num'>
+            <button id = 'btn'>Submit</button>
+        </div>
+        <span>
+            Output : <output id = 'output'></output>
+        </span>
+    </main>
+</body>
+<script>
+    const input_number = document.querySelector('#input-num');
+    const output_result = document.querySelector('#output');
+    const btn = document.querySelector('#btn');
+
+    const even_odd = (num) =>{
+        return num % 2 == 0 ? 'Genap' : 'Ganjil'
+    }
+
+    btn.addEventListener('click', () => {
+        const value = Number(input_number.value);
+        output_result.innerText = even_odd(value);
+    })
+</script>
+</html>
